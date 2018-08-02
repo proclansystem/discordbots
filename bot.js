@@ -31,20 +31,22 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
- هلا ي قلبي :heart: 
-:champagne_glass: :honey_pot: 
-كيفك ي عسل؟ ؟
+:kissing::heart::eyes: حيااكْ الله  فى سيرفرنا 
+╔╦╦╦═╦╗╔═╦═╦══╦═╗
+║║║║╩╣╚╣═╣║║║║║╩╣
+╚══╩═╩═╩═╩═╩╩╩╩═╝ 
 
-بالله صوت ل خويي المتسابق رقم 2 و 11 :sparkles: 
-" 
-صوتت؟؟
+‏نقدم لك دعوة لسموك الراقيَ .
+‏لنحظى بجمال حضورك وتواجدك
+•بتنـورونـا الجميع :wink:
+•اي مشكله توآجهك ولا يهمك. عندك الاداره تفضل ونحل مشكلتك مع آي شخص بالسيرفر.:telephone_receiver:
+•عندك فكره موضوع تفضل شآركنا فيه:jack_o_lantern::gift:
+•واخيرا حييييياكم واكيد وجودكم هو اللي بيدعمنا وراح نكون الافضل.
+شرفنا يا عسل:wink: :kissing_heart:
 
-الله يسعدك ي رب " 
-
-واذا م صوتت بالله صوت :joy: :purple_heart: 
-
-https://discord.gg/X4HkmVg       
-لا تسحب علي يا قلبي ... [ ${member}  ]
+https://discord.gg/dqYkTHZ
+          
+الدعووة خاصة لك ي قلبي ... [ ${member}  ]
 **`)
 }).catch(console.error)
 
@@ -54,20 +56,22 @@ client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
- هلا ي قلبي :heart: 
-:champagne_glass: :honey_pot: 
-كيفك ي عسل؟ ؟
+:kissing::heart::eyes: حيااكْ الله  فى سيرفرنا 
+╔╦╦╦═╦╗╔═╦═╦══╦═╗
+║║║║╩╣╚╣═╣║║║║║╩╣
+╚══╩═╩═╩═╩═╩╩╩╩═╝ 
 
-بالله صوت ل خويي المتسابق رقم 2 و 11 :sparkles: 
-" 
-صوتت؟؟
+‏نقدم لك دعوة لسموك الراقيَ .
+‏لنحظى بجمال حضورك وتواجدك
+•بتنـورونـا الجميع :wink:
+•اي مشكله توآجهك ولا يهمك. عندك الاداره تفضل ونحل مشكلتك مع آي شخص بالسيرفر.:telephone_receiver:
+•عندك فكره موضوع تفضل شآركنا فيه:jack_o_lantern::gift:
+•واخيرا حييييياكم واكيد وجودكم هو اللي بيدعمنا وراح نكون الافضل.
+شرفنا يا عسل:wink: :kissing_heart:
 
-الله يسعدك ي رب " 
+https://discord.gg/dqYkTHZ
 
-واذا م صوتت بالله صوت :joy: :purple_heart: 
-
-https://discord.gg/X4HkmVg                     
-لا تسحب علي يا قلبي ... [ ${member}  ]
+الدعووة خاصة لك ي قلبي ... [ ${member}  ]
 **`) 
 }).catch(console.error)
 })
