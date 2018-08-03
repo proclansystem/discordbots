@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
+client.user.setGame(`I Love You !`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -43,8 +43,8 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
 •عندك فكره موضوع تفضل شآركنا فيه:jack_o_lantern::gift:
 •واخيرا حييييياكم واكيد وجودكم هو اللي بيدعمنا وراح نكون الافضل.
 شرفنا يا عسل:wink: :kissing_heart:
-
-https://discord.gg/dqYkTHZ
+NEVER FORGET
+https://discord.gg/C7dcwpN
           
 الدعووة خاصة لك ي قلبي ... [ ${member}  ]
 **`)
@@ -68,8 +68,8 @@ client.on("guildMemberAdd", member => {
 •عندك فكره موضوع تفضل شآركنا فيه:jack_o_lantern::gift:
 •واخيرا حييييياكم واكيد وجودكم هو اللي بيدعمنا وراح نكون الافضل.
 شرفنا يا عسل:wink: :kissing_heart:
-
-https://discord.gg/dqYkTHZ
+NEVER FORGET
+https://discord.gg/C7dcwpN
 
 الدعووة خاصة لك ي قلبي ... [ ${member}  ]
 **`) 
