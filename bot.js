@@ -127,13 +127,13 @@ client.on('message', function(message) {
             dispatcher.pause();
         });
     }
-    else if (mess.startsWith(prefix + 'ok')) {
+    else if (mess.startsWith(prefix + 'resume')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
             message.channel.send('`✔`').then(() => {
             dispatcher.resume();
         });
     }
-    else if (mess.startsWith(prefix + 'stop')) {
+    else if (mess.startsWith(prefix + 'leave')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
         message.channel.send('`✔`');
         var server = server = servers[message.guild.id];
@@ -255,5 +255,31 @@ client.on('message', message => {
       message.channel.send({embed});
 	 }
 	});
+
+
+client.on('message', message => {
+var prefix = "$";
+ 
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+  if (message.author.id == '395462979115679755' ) return;
+ 
+if (message.content.startsWith(prefix + 'stream')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
+    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
+} else
+ 
+if (message.content.startsWith(prefix + 'name')) {
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
+  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
+} else
+
+if (message.content.startsWith(prefix + 'img')) {
+  client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+}
+});
 
 client.login(process.env.BOT_TOKEN);
