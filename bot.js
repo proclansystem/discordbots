@@ -226,61 +226,34 @@ function search_video(query, cb) {
 function isYoutube(str) {
     return str.toLowerCase().indexOf('youtube.com') > -1;
 }
- client.on('message', message => {
+
+client.on('message', message => {
      if (message.content === prefix +"help") {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
-     .addField(`Zyad,aLmutairi commands:
-
-+about - shows info about the bot
-+ping - checks the bot's latency
-
-  Music:
-
-+play - shows the song that is currently playing
-+play <title|URL|subcommand> - plays the provided song
-+queue [pagenum] - shows the current queue
-+تعال <title|URL|subcommand> - plays the provided song
-+skip - votes to skip the current song
-
-  DJ:
-+ok <title|URL|subcommand> - plays the provided song
-+skip - skips the current song
-+pause - pauses the current song
-+skipt <position> - skips to the specified song
-+stop - stops the current song and clears the queue
-+vol [0-150] - sets or shows volume
-
-For additional help,  `)
+     .addField(`**__أوامر البوت__**`,`
+         **${prefix}join**
+	 عشان يدخل البوت الروم
+         **${prefix}leave**
+         خروج البوت من الروم	 
+         **${prefix}play**
+	 امر تشغيل الأغنية , !play الرابط او اسم الأعنية
+	 **${prefix}skip**
+	 تغير الأغنية
+	 **${prefix}pause**
+	 ايقاف الأغنية
+	 **${prefix}resume**
+     مواصلة الأغنية
+	 **${prefix}vol**
+	 مستوى الصوت 1-100
+        
+	 PREFIX = ${prefix}
+	 PING = ${Date.now() - message.createdTimestamp}ms
+	 FOR HELP = <@337457211875917834>
+	By : ! OsTaaZz SyTrAAءء $ `)
 
       message.channel.send({embed});
-     }
-    });
-	client.on('message', message => {
-    if (message.content.startsWith("habout")) {
-      message.channel.send({
- embed: new Discord.RichEmbed() 
-    .setColor('RED')
-    .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
-         .addField('**سرعة الاتصال📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
-        .addField('**وقت الاقلاع⌚**', timeCon(process.uptime()), true)
-        .addField('**استخدام المعالج💿**', `${(process.cpuUsage().rss / 10000).toFixed()}%`, true)
-     })
-    }
-  });
-  client.on('message', message => {
-                                if(!message.channel.guild) return;
-                        if (message.content.startsWith('hping')) {
-                            if(!message.channel.guild) return;
-                            var msg = `${Date.now() - message.createdTimestamp}`
-                            var api = `${Math.round(client.ping)}`
-                            if (message.author.bot) return;
-                        let embed = new Discord.RichEmbed()
-                        .setAuthor(message.author.username,message.author.avatarURL)
-                        .setColor('RANDOM')
-                        .addField('**Time Taken:**',msg + " ms 📶 ")
-                        .addField('**WebSocket:**',api + " ms 📶 ")
-         message.channel.send({embed:embed});
-                        }
-                    });
+	 }
+	});
+
 client.login(process.env.BOT_TOKEN);
