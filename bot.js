@@ -1,9 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const prefix = '$'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`I Love You !`,"http://twitch.tv/S-F")
+client.user.setGame(`ء BoNdOK-$`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -277,7 +278,7 @@ function isYoutube(str) {
 
 
 client.on('message', message => {
-var prefix = "1";
+var prefix = "$";
  
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
