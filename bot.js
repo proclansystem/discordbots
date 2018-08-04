@@ -265,11 +265,6 @@ var prefix = "$";
   var argresult = args.join(' ');
   if (message.author.id == '395462979115679755' ) return;
  
-if (message.content.startsWith(prefix + 'play')) {
-  client.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
-} else
- 
 if (message.content.startsWith(prefix + 'stream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
     message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
