@@ -1,34 +1,15 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '$'
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`ء BoNdOK-$`,"http://twitch.tv/S-F")
-  console.log('')
-  console.log('')
-  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
-  console.log(`[Start] ${new Date()}`);
-  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════════════════════════════]╗');
-  console.log(`Logged in as * [ " ${client.user.username} " ]`);
-  console.log('')
-  console.log('Informations :')
-  console.log('')
-  console.log(`servers! [ " ${client.guilds.size} " ]`);
-  console.log(`Users! [ " ${client.users.size} " ]`);
-  console.log(`channels! [ " ${client.channels.size} " ]`);
-  console.log('╚[════════════════════════════════════]╝')
-  console.log('')
-  console.log('╔[════════════]╗')
-  console.log(' Bot Is Online')
-  console.log('╚[════════════]╝')
-  console.log('')
-  console.log('')
-});
-
- 	client.on('ready', function() {
+const ytdl = require('ytdl-core');
+const request = require('request');
+const fs = require('fs');
+const getYoutubeID = require('get-youtube-id');
+const fetchVideoInfo = require('youtube-info');
+const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";//لاتغير شيي
+const prefix = '$';
+client.on('ready', function() {
+	console.log(`i am ready ${client.user.username}`);
+	client.user.setGame(`ء BoNdOK-$`,"http://twitch.tv/S-F")
 });
 /*
 ////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -132,7 +113,7 @@ client.on('message', function(message) {
 			if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
 		});
 	}
-	else if (message.content.startsWith(prefix + 'volume')) {
+	else if (message.content.startsWith(prefix + 'vol')) {
 		if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
 		// console.log(args)
 		if (args > 100) return message.channel.send('1 - 100 || **__لا أكثر ولا أقل__**')
@@ -250,32 +231,31 @@ function isYoutube(str) {
     const embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .addField(`**__أوامر البوت__**`,`
-.    **${prefix}join**
+         **${prefix}join**
 	 عشان يدخل البوت الروم
-	 **${prefix}play**
-	 امر تشغيل الأغنية , !شغل الرابط او اسم الأعنية
+         **${prefix}leave**
+         خروج البوت من الروم	 
+         **${prefix}play**
+	 امر تشغيل الأغنية , !play الرابط او اسم الأعنية
 	 **${prefix}skip**
 	 تغير الأغنية
 	 **${prefix}pause**
 	 ايقاف الأغنية
 	 **${prefix}resume**
      مواصلة الأغنية
-	 **${prefix}volume**
+	 **${prefix}vol**
 	 مستوى الصوت 1-100
-	 **${prefix}leave**
-	 خروج البوت من الروم
-
-
+        
 	 PREFIX = ${prefix}
 	 PING = ${Date.now() - message.createdTimestamp}ms
 	 FOR HELP = <@337457211875917834>
-	BY : OsTaaZ SyTrA `)
+	By : ! OsTaaZz SyTrAAءء $ `)
 
       message.channel.send({embed});
 	 }
 	});
-
-
+	
+	
 
 client.on('message', message => {
 var prefix = "$";
