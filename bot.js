@@ -107,7 +107,7 @@ client.on('message', function(message) {
     }
     else if (mess.startsWith(prefix + 'skip')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
-        message.channel.send('`✔`').then(() => {
+        message.channel.send('`SKIPPED ✔`').then(() => {
             skip_song(message);
             var server = server = servers[message.guild.id];
             if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
@@ -123,25 +123,25 @@ client.on('message', function(message) {
     }
     else if (mess.startsWith(prefix + 'pause')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
-        message.channel.send('`✔`').then(() => {
+        message.channel.send('`PAUSED ✔`').then(() => {
             dispatcher.pause();
         });
     }
     else if (mess.startsWith(prefix + 'resume')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
-            message.channel.send('`✔`').then(() => {
+            message.channel.send('`RESUMED ✔`').then(() => {
             dispatcher.resume();
         });
     }
     else if (mess.startsWith(prefix + 'leave')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
-        message.channel.send('`✔`');
+        message.channel.send('`DONE ✔`');
         var server = server = servers[message.guild.id];
         if (message.guild.voiceConnection) message.guild.voiceConnection.disconnect();
     }
     else if (mess.startsWith(prefix + 'join')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
-        message.member.voiceChannel.join().then(message.channel.send(':ok:'));
+        message.member.voiceChannel.join().then(message.channel.send('JOINED :ok:'));
     }
     else if (mess.startsWith(prefix + 'play')) {
         if (!message.member.voiceChannel) return message.channel.send(':no_entry: || **__يجب ان تكون في روم صوتي__**');
