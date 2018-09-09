@@ -275,6 +275,15 @@ if (message.content.startsWith(prefix + 'setname')) {
   return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
 
+if (message.content.startsWith(prefix + 'watch')) {
+client.user.setActivity(argresult, {type:'WATCHING'});
+    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
+} else 
+if (message.content.startsWith(prefix + 'listg')) {
+client.user.setActivity(argresult, {type:'LISTENING'});
+    message.channel.sendMessage(`**:white_check_mark:  : ${argresult}**`)
+} else 
+
 if (message.content.startsWith(prefix + 'setimg')) {
   client.user.setAvatar(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
